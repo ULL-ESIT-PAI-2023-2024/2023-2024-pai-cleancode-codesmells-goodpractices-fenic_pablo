@@ -13,9 +13,13 @@
  */
 
 
-
-// Example that have many arguments
-// Dificult the testing
+/**
+ * Check if a value is between two values
+ * @param title Name of the menu
+ * @param body content of the menu
+ * @param buttonText text of the button
+ * @param cancellable if the menu can be cancelled or not
+ */
 function createMenu(title: string, body: string, buttonText: string, cancellable: boolean) {
     // ...
 }
@@ -23,13 +27,64 @@ function createMenu(title: string, body: string, buttonText: string, cancellable
 createMenu('Foo', 'Bar', 'Baz', true);
 
 
-// Option That bette, why is better?
+/**
+ * Check if a value is between two values
+ * @param options object with the options of the menu
+ */
 function createMenu(options: { title: string, body: string, buttonText: string, cancellable: boolean }) {
 }
   
-  createMenu({
-    title: 'Foo',
-    body: 'Bar',
-    buttonText: 'Baz',
-    cancellable: true
-  });
+// Option that is better, why is better?
+// The code is more readable and the function is more flexible
+type MenuOptions = { title: string, body: string, buttonText: string, cancellable: boolean };
+
+/**
+ * Check if a value is between two values
+ * @param options object with the options of the menu
+ */
+function createMenu(options: MenuOptions) {
+  // ...
+}
+
+// Function names should say what they do
+
+function addToDate(date: Date, month: number): Date {
+  // ...
+}
+
+const date = new Date();
+
+// It's hard to tell from the function name what is added
+addToDate(date, 1);
+
+// Functions should only be one level of abstraction
+
+// Don't use flags as function parameters
+
+/**
+ * create a file in the system 
+ * @param name string with the name of the file
+ * @param temp boolean if the file is temporary or not
+ */
+function createFile(name: string, temp: boolean) {
+  if (temp) {
+    fs.create(`./temp/${name}`);
+  } else {
+    fs.create(name);
+  }
+}
+
+/**
+ * create a file in the system temporary
+ * @param name name of the file
+ */
+function createTempFile(name: string) {
+  createFile(`./temp/${name}`);
+}
+ /**
+  * create a file in the system
+  * @param name name of the file
+  */
+function createFile(name: string) {
+  fs.create(name);
+}

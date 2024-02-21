@@ -12,26 +12,84 @@
  * @see {@link https://opensource.org/licenses/GPL-3.0}
  */
 
-// Example that is dificult read function a know what do
+// Use meaningful variable names
+
+/**
+ * Check if a value is between two values
+ * @param a1 Value that have to be between a2 and a3
+ * @param a2 Value that must be less or equal than a1
+ * @param a3 Value that must be greater or equal than a1
+ * @returns true if a1 is between a2 and a3, false otherwise
+ */
 function between<T>(a1: T, a2: T, a3: T): boolean {
     return a2 <= a1 && a1 <= a3;
   }
 
-// Good Example That describe what do
+/**
+ * Check if a value is between two values left and right
+ * @param value value that have to be between left and right
+ * @param left value that must be less or equal than value
+ * @param right value that must be greater or equal than value
+ * @returns true if value is between left and right, false otherwise
+ */
 function betweenTwoValues<T>(value: T, left: T, right: T): boolean {
     return left <= value && value <= right;
   }
 
-// pronounceable functions
+// Use pronounceable variable names
+
+// pronounceable functions you cant pronunce 
+// the name of the function
 type DtaRcrd102 = {
     genymdhms: Date;
     modymdhms: Date;
     pszqint: number;
   }
 
-// Can be proounceable
+// Can be proounceable, so you can explain what do
 type Customer = {
     generationTimestamp: Date;
     modificationTimestamp: Date;
     recordId: number;
   }
+
+
+// Don't add unneeded context
+// If your class/type/object name tells you something, 
+// don't repeat that in your variable name.
+
+type Car = {
+  carMake: string;
+  carModel: string;
+  carColor: string;
+}
+
+// Good Example It's not necessary to add car to the variable name
+type Car = {
+  make: string;
+  model: string;
+  color: string;
+}
+
+// Use explanatory variables
+
+type User = {
+  name: string;
+  age: number;
+  email: string;
+}
+
+declare const users: Map<string, User>;
+
+for (const keyValue of users) {
+  // iterate through users map
+}
+
+
+// Good Example
+
+declare const user: Map<string, User>;
+
+for (const [userName, user] of users) {
+  // iterate through users map
+}

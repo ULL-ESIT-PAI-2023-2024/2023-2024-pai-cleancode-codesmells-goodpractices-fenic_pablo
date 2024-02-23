@@ -58,36 +58,20 @@ type Customer = {
 // If your class/type/object name tells you something, 
 // don't repeat that in your variable name.
 
-type Car = {
-  carMake: string;
-  carModel: string;
-  carColor: string;
-}
-
-// Good Example It's not necessary to add car to the variable name
-type Car = {
-  make: string;
-  model: string;
-  color: string;
-}
-
-// Use explanatory variables
-
 type User = {
   name: string;
   age: number;
   email: string;
 }
 
+// Use explanatory variables
 declare const users: Map<string, User>;
-
 for (const keyValue of users) {
   // iterate through users map
 }
 
 
 // Good Example
-
 declare const user: Map<string, User>;
 
 for (const [userName, user] of users) {

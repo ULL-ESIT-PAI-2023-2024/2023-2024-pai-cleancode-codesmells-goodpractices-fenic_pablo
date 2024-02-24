@@ -16,20 +16,24 @@
 
 // This class example is about a customer, but it has too many responsibilities.
 //  example address, name, email, phone, etc.
+
 class Customer {
   constructor(
       private id: number, private name: string, private email: string,
       private phone: string, private city: string, private country: string,
       private postalCode: string) {}
     // This class has too many responsibilities, and should be avoided.
-    public getId(): number {
-      return this.id;
-    }
     public getAddress(): string {
       return this.city + ', ' + this.country + ', ' + this.postalCode;
     }
     public getLocalAddress(): string {
       return this.city + ', ' + this.postalCode;
     }
+    public getId(): number {
+      return this.id;
+    }
+    public getName(): string {
+      return this.name;
+    }   // ...
 }
 

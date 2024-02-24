@@ -14,21 +14,22 @@
 
 
 // MenuOptions is an object that contains the parameters of the menu
-type MenuOptions = { title: string, body: string, buttonText: string, cancellable: boolean };
+type MenuOptions = {
+  title: string,
+  body: string,
+  buttonText: string,
+  cancellable: boolean
+};
 
 /**
  * Create a menu with the given parameters
  * @param options the parameters of the menu
-*/
+ */
 function createMenu(options: MenuOptions) {
   // ...
 }
 
 
+
 // Usage
-createMenu({
-  title: 'Foo',
-  body: 'Bar',
-  buttonText: 'Baz',
-  cancellable: true
-});
+createMenu({title: 'Foo', body: 'Bar', buttonText: 'Baz', cancellable: true});

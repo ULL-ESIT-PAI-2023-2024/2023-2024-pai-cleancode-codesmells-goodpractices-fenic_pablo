@@ -22,18 +22,18 @@ class Customer {
       private id: number, private name: string, private email: string,
       private phone: string, private city: string, private country: string,
       private postalCode: string) {}
-    // This class has too many responsibilities, and should be avoided.
-    public getAddress(): string {
-      return this.city + ', ' + this.country + ', ' + this.postalCode;
-    }
-    public getLocalAddress(): string {
-      return this.city + ', ' + this.postalCode;
-    }
-    public getId(): number {
-      return this.id;
-    }
-    public getName(): string {
-      return this.name;
-    }   // ...
+  // This class has too many responsibilities, and should be avoided.
+  public getAddress(): string {
+    return this.city + ', ' + this.country + ', ' + this.postalCode;
+  }
+  public getLocalAddress(): string {
+    return this.city + ', ' + this.postalCode;
+  }
+  public getId(): number {
+    return this.id;
+  }
+  public getName(): string {
+    return this.name;
+  }   // ...
 }
 

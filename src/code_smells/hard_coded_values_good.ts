@@ -12,21 +12,36 @@
  * @see {@link https://opensource.org/licenses/GPL-3.0}
  */
 
-// One value of pi for every function.
-const PI = 3.14;
+// A constant that acts as a single source for the max length of a password.
+const MAX_PASSWORD_LENGTH = 7;
 
 /**
- * Calculates the circumference of a circle 
- * @param diameter The diameter of the circle.
- * @returns The circumference
- */
-function calculateCircumference(diameter): number {
-  return diameter * PI;
+ * Checks if the given password is correct for the system.
+ * @param password The given password
+ * @returns True if the password is admisible, false otherwise.
+*/
+function validatePassword(password: string): boolean {
+  if (password.length > MAX_PASSWORD_LENGTH) {
+    return false;
+  }
+  return true; 
 }
 
 /**
- * Prints the value of the number pi.
+ * Imagine that there's a lot of code here.
+ * Lots and lots of code. Because '7' (the max password length) is hard-coded,
+ * if we refer to the max password length in another piece of code we would have
+ * and we wanted to change it we would have to remember where we used it.
  */
-function printPiValue(): void {
-  console.log(PI);
+
+/**
+ * Generates a password made out of numbers.
+ * @returns The password.
+ */
+function generatePassword(): string {
+  let password = '';
+  for (let currentDigit = 0; currentDigit < MAX_PASSWORD_LENGTH; ++currentDigit) {
+    password += String(currentDigit);
+  }
+  return password;
 }

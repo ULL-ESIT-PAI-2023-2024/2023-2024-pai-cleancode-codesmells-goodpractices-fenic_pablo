@@ -13,18 +13,33 @@
  */
 
 /**
- * Calculates the circumference of a circle 
- * @param diameter The diameter of the circle.
- * @returns The circumference
- */
-function calculateCircumference(diameter): number {
-  return diameter * 3.14; // A value of pi
+ * Checks if the given password is correct for the system.
+ * @param password The given password
+ * @returns True if the password is admisible, false otherwise.
+*/
+function validatePassword(password: string): boolean {
+  if (password.length > 7) { // Max password length is 7.
+    return false;
+  }
+  return true; 
 }
 
 /**
- * Prints the value of the number pi.
+ * Imagine that there's a lot of code here.
+ * Lots and lots of code. Because '7' (the max password length) is hard-coded,
+ * if we refer to the max password length in another piece of code we would have
+ * and we wanted to change it we would have to remember where we used it.
  */
-function printPiValue(): void {
-  console.log(3.1415); // Another value of pi
-}
 
+/**
+ * Generates a password made out of numbers.
+ * @returns The password.
+ */
+function generatePassword(): string {
+  let password = '';
+  // Notice how the password is going to be 8 characters, won't be valid.
+  for (let currentDigit = 0; currentDigit < 8; ++currentDigit) {
+    password += String(currentDigit);
+  }
+  return password;
+}

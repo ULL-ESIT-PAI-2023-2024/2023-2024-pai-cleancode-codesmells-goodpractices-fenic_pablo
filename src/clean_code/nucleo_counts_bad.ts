@@ -27,7 +27,7 @@ interface Nucleotide {
  * @returns Nucleotide object with the count of each nucleotide
  */
 export function nucleotideCounts(sequenceDna: string): Nucleotide {
-  if (HaveDiferentCharDna(sequenceDna)) {
+  if (haveDifferentCharDna(sequenceDna)) {
     throw new Error('Invalid nucleotide in strand');
   }
   let result: Nucleotide = {
@@ -51,11 +51,11 @@ export function nucleotideCounts(sequenceDna: string): Nucleotide {
 }
 
 /**
- * @description Check if the DNA has diferent characters
- * @param sequenceDna
- * @returns boolean
+ * @description Check if the DNA has different characters
+ * @param sequenceDna string with the DNA sequence
+ * @returns true if the DNA has diferent characters and false in other case
  */
-function HaveDiferentCharDna(sequenceDna: string): boolean {
+function haveDifferentCharDna(sequenceDna: string): boolean {
   // Given a DNA string, compute how many times each nucleotide occurs in the
   for (const value of sequenceDna) {
     if (!ELEMENT_DNA.includes(value)) {

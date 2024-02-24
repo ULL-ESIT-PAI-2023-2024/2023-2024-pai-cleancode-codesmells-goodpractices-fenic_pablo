@@ -6,7 +6,7 @@
  *
  * @author Jose Fenic Peiteado Padiila
  * @since 24/01/2024
- * @desc Explicacion del programa:
+ * @desc Example of nucleotide count good.
  * @see {@link }
  * @license GNU General Public License, version 3 (GPL-3.0)
  * @see {@link https://opensource.org/licenses/GPL-3.0}
@@ -20,11 +20,11 @@ interface Nucleotide {
 }
 
 /**
- * @description Check if the DNA has diferent characters
- * @param sequenceDna
- * @returns boolean
+ * Check if the DNA has different characters
+ * @param sequenceDna string with the DNA sequence
+ * @returns true if the DNA has different characters and false in other case
 */
-function HaveDiferentCharDna(sequenceDna: string): boolean {
+function haveDifferentCharDna(sequenceDna: string): boolean {
   const ELEMENT_DNA = ['A', 'C', 'G', 'T'];
   for (const value of sequenceDna) {
     if (!ELEMENT_DNA.includes(value)) {
@@ -34,7 +34,6 @@ function HaveDiferentCharDna(sequenceDna: string): boolean {
   return false;
 }
 
-
 /**
  * Given a DNA string, compute how many times each nucleotide occurs in the
  * string.
@@ -42,7 +41,7 @@ function HaveDiferentCharDna(sequenceDna: string): boolean {
  * @returns Nucleotide object with the count of each nucleotide
  */
 export function nucleotideCounts(sequenceDna: string): Nucleotide {
-  if (HaveDiferentCharDna(sequenceDna)) {
+  if (haveDifferentCharDna(sequenceDna)) {
     throw new Error('Invalid nucleotide in strand');
   }
   let result: Nucleotide = {

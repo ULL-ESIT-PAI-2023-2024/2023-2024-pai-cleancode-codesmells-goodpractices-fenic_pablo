@@ -19,9 +19,6 @@
  * Checks that the given arguments are correct.
  * @param arguments 
  */
-let product;
-
-
 function usage(arguments: string[]): void {
   for (let arg of arguments) {
     let argAsNumber = Number(arg);
@@ -32,6 +29,7 @@ function usage(arguments: string[]): void {
 }
 
 function factorial(term: number): number {
+  let product = 0;
   if (!isANaturalNumber(term)) {
     throw new Error(`${term} is not a natural number`);
   }

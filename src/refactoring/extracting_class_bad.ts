@@ -40,7 +40,7 @@ class Shop {
    * @param newProduct The name of the product
    * @param price The price of the product
    */
-  addProduct(newProduct: string, price: number): void {
+  public addProduct(newProduct: string, price: number): void {
     this.products.set(newProduct, price);
   }
 
@@ -48,7 +48,7 @@ class Shop {
    * Get the shopkeeper's full name
    * @returns The shopkeeper's full name
    */
-  getShopkeeperName(): string {
+  public getShopkeeperName(): string {
     return this.shopkeeperFirstName + ' ' + this.shopkeeperLastName;
   }
 
@@ -57,7 +57,7 @@ class Shop {
    * @param products Name of the chosen products
    * @returns The total price of the products.
    */
-  calculateShoppingBasketPrice(products: string[]): number {
+  public calculateShoppingBasketPrice(products: string[]): number {
     let totalPrice: number = 0;
     for (let [product, price] of this.products) {
       this.checkProductExistance(product);

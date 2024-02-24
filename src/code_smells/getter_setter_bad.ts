@@ -14,14 +14,11 @@
 
 // This is a bad practice, we should avoid using only getters and setters.
 class Point {
-  private x: number;
-  private y: number;
-
-  constructor(x: number, y: number) {
+  constructor(private x: number,private y: number) {
     this.x = x;
     this.y = y;
   }
-
+  // Only getters and setters ? Bad practice.
   public getX() {
     return this.x;
   }
@@ -29,12 +26,6 @@ class Point {
   public setX(x: number) {
     this.x = x;
   }
-
-  public getY() {
-    return this.y;
-  }
-
-  public setY(y: number) {
-    this.y = y;
-  }
+  // More getters and setters.
 }
+

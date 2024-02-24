@@ -16,19 +16,19 @@
  * Checks if the given password is correct for the system.
  * @param password The given password
  * @returns True if the password is admisible, false otherwise.
- */
 function validatePassword(password: string): boolean {
   if (password.length > 7) { // Realizing what is 7 is more difficult this way.
     return false;
   }
   return true; 
 }
+*/
 
 /**
  * Checks if the given password is correct for the system.
  * @param password The given password
  * @returns True if the password is admisible, false otherwise.
- */
+*/
 function validatePassword(password: string): boolean {
   const MAX_PASSWORD_LENGTH = 7;
   if (password.length > MAX_PASSWORD_LENGTH) { // Easier to understand.

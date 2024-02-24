@@ -17,7 +17,6 @@
  * and a set of parsing rules for each token type found.
  * @param code The code to be parsed
 */
-
 function parseCode(code: string) {
   const REGEXES = [ /* ... */ ];
   const statements = code.split(' ');
@@ -33,7 +32,7 @@ function parseCode(code: string) {
   tokens.forEach((token) => {
     // lex...
   });
-
+  // ...
   ast.forEach((node) => {
     // parse...
   });

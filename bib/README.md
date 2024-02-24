@@ -8,3 +8,4 @@
 - [DRY principle](https://www.oreilly.com/library/view/97-things-every/9780596809515/ch30.html).
 - [Another code smell reference](https://wiki.c2.com/?CodeSmell).
 - [Another KISS reference](https://medium.com/infancyit/kiss-keep-it-simple-smart-javascript-habits-b019ce14b5ec).
+- [YAGNI reference](https://martinfowler.com/bliki/Yagni.html).
